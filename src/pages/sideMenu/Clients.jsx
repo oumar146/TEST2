@@ -1,4 +1,3 @@
-import BaseOfPages from "../../components/BaseOfPages";
 import ClientsList from "../../components/clients/ClientsList";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
@@ -22,9 +21,9 @@ const Clients = () => {
   }, []);
     
   return (
-    <BaseOfPages>
-      <ClientsList users = {users} /> 
-    </BaseOfPages>
+    <div>
+      {users && <ClientsList users = {users} /> }
+    </div>
   );
 };
 

@@ -1,5 +1,4 @@
 import OrdersList from "../../components/orders/OrdersList";
-import BaseOfPages from "../../components/BaseOfPages";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import config from "../../config";
@@ -25,9 +24,9 @@ const Orders = () => {
   }, [refresh]);
     
   return (
-    <BaseOfPages>
+    <div>
       {orders && <OrdersList data = {orders} rows={rows} setRows={setRows} refresh={refresh} setRefresh={setRefresh}/>}
-      </BaseOfPages>
+      </div>
   );
 };
 
